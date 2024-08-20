@@ -1,4 +1,4 @@
-What is Docker?
+What is Docker? <br>
 Docker is open-source platform for building, deploying, and managing containerzied applications.
 - Ensures consistency
 - Portability
