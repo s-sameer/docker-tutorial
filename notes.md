@@ -26,7 +26,7 @@ Common dockerfile commands:
 - ARG: Defines a variable that users can pass at build-time to the image 
 - VOLUME: Creates a mount point with a specified path and marks it as a volume. Essentially specifying a location inside the container where you can connect external storage
 - CMD: Specifies the default command to run when a container is started. Only one CMD can be used per Dockerfile.
-- ENTRYPOINT: Similar to CMD, but 
+- ENTRYPOINT: Similar to CMD, but less flexible
 
 What is a Docker Volume?
 - A docker volume is a persistent data storage mechanism
@@ -41,3 +41,14 @@ Docker workflow:
 - Docker client - is the user interface for interacting with Docker
 - Docker daemon - is the background service that does the running, building and managing of containers. It listens to commands from the docker client and executes it.
 - Docker registry/hub - is a centralized repo of docker images, containing both public and private images
+
+Common docker commands:
+- docker pull: pulls a pre-built Docker image from Docker Hub
+- docker run: creates a container from the pulled image
+  - -d: Runs the container in detached mode (in the background).
+  - -p: Maps a port on the host to a port on the container.
+- docker ps: List all the running containers
+- docker stop <container_id>: Stops a running container
+- docker rm <container_id>: Removes a stopped container
+- docker build: Used to build your own custom image from a dockerfile
+
