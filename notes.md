@@ -44,11 +44,18 @@ Docker workflow:
 
 Common docker commands:
 - docker pull: pulls a pre-built Docker image from Docker Hub
-- docker run: creates a container from the pulled image
+- docker run: creates a container from an image
   - -d: Runs the container in detached mode (in the background).
   - -p: Maps a port on the host to a port on the container.
+  - -v: Is used to mount volumes, which allows you to map a directory or file from your host machine to the container
+  - -it: Runs the container in interactive mode
 - docker ps: List all the running containers
 - docker stop <container_id>: Stops a running container
 - docker rm <container_id>: Removes a stopped container
 - docker build: Used to build your own custom image from a dockerfile
+- docker container prune: This removes all stopped containers
+- docker init: Initializes our app with all needed files
+
+What is Docker Compose? <br>
+Docker Compose is a tool that simplifies running multi-container Docker applications. With Docker Compose, you can define and manage multi-container applications using a YAML file, which makes it easy to start, stop, and manage containers as a group.
 
