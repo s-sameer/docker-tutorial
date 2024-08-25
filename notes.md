@@ -83,7 +83,13 @@ Common service attributes in docker compose:
 - deploy: Specifies deployment and runtime options.
 - networks: Connects the container to specified networks.
 
-Docker Compose Watch:
+What is Docker Compose Watch?
 - Is a feature that listens to changes in the project and automatically rebuilds and restarts your containers. 
 - We use the develop attribute to watch for changes and take some action
-- Actions include: sync, rebuild, 
+- Actions include: sync, rebuild, sync-restart
+
+What is Docker Scout?
+- Is a tool that helps us be proactive about security
+- It scans our container images, looks at all the layers and creates a detailed list called a Software Bill of Materials (SBOM)
+- Then docker scout checks this list against a database of known vulnerabilities
+- We can use docker scout in docker desktop, docker hub, & docker cli
