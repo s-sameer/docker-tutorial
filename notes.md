@@ -92,4 +92,4 @@ What is Docker Scout?
 - Is a tool that helps us be proactive about security
 - It scans our container images, looks at all the layers and creates a detailed list called a Software Bill of Materials (SBOM)
 - Then docker scout checks this list against a database of known vulnerabilities
-- We can use docker scout in docker desktop, docker hub, & docker cli
+- We can use docker scout in docker desktop, hub, & cli
