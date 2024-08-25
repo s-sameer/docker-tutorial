@@ -58,13 +58,32 @@ Common docker commands:
 
 What is Docker Compose? <br>
 Docker Compose is a tool that simplifies running multi-container Docker applications. With Docker Compose, you can define and manage multi-container applications using a YAML file, which makes it easy to start, stop, and manage containers as a group.
-- compose.yml: Is the configuration file where you define your application's services, networks, and volumes. It describes how your containers should be built, configured, and connected
+- compose.yaml: Is the configuration file where you define your application's services, networks, and volumes. It describes how your containers should be built, configured, and connected
 - service: A service represents a container in your application. Each service runs a specific image and has its own configuration.
 - networks: Docker Compose automatically creates a network for your services to communicate with each other. Can also define custom networks.
 - volumes: Volumes allow you to persist data and share files between your host machine and the containers, or between containers
 
 Common docker compose commands:
-- docker-compose up: This command starts and runs all the services defined in the docker-compose.yml file. If the images aren’t already built, it will build them.
+- docker-compose up: This command starts and runs all the services defined in the docker-compose.yaml file. If the images aren’t already built, it will build them.
 - docker-compose down: Stops and removes all containers, networks, and volumes created by 'docker-compose up'
-- docker-compose build: Builds the Docker images for the services defined in the compose.yml file.
+- docker-compose build: Builds the Docker images for the services defined in the compose.yaml file.
 - docker-compose ps: Lists all the running containers defined in the compose.yaml file
+
+Common service attributes in docker compose:
+- image: Specifies the base image to use for the container.
+- build: Defines the build configuration for creating the service's image. Basically specify where the dockerfile for this service is.
+- ports: Maps host ports to container ports.
+- environment: Sets environment variables inside the container.
+- volumes: Mounts host paths or named volumes to the container.
+- depends_on: Expresses dependency between services.
+- develop: This is for docker compose watch mode.
+- watch: Specify the files to watch for changes and perform an action
+- command: Overrides the default command of the container.
+- restart: Configures the restart policy for the container.
+- deploy: Specifies deployment and runtime options.
+- networks: Connects the container to specified networks.
+
+Docker Compose Watch:
+- Is a feature that listens to changes in the project and automatically rebuilds and restarts your containers. 
+- We use the develop attribute to watch for changes and take some action
+- Actions include: sync, rebuild, 
