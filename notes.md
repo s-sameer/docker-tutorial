@@ -5,7 +5,8 @@ Docker is open-source platform for building, deploying, and managing containerzi
 - Helps track application 
 
 What is a Docker Image?
-- A docker image is a lightweight, standalone, executable package that includes everything needed to run an application: code, libraries,runtime, and system tools.
+- A docker image is a lightweight, standalone, executable package that includes everything needed to run an application: code, libraries, runtime, and system tools.
+- Images are made up of several layers. Each line usually represents one layer. Docker caches every layer during the build process.
 - The image is the blueprint for creating containers
 
 What is Docker Container?
@@ -17,7 +18,7 @@ What is a Dockerfile?
 - A dockerfile is a text file which contains the instructions for bilding a docker image
 
 Common dockerfile commands:
-- FROM: Specifies the base image to use for the Docker image
+- FROM: Specifies the base image to use for the Docker image. The base image specifies the runtime and OS for our image.
 - WORKDIR: Sets the working directory inside the container. All subsequent commands in the Dockerfile will be run from this directory.
 - COPY: Copies files or directories from the host machine to the image
 - RUN: Executes commands in the shell within the container during the image build process. Typically used to install software packages.
